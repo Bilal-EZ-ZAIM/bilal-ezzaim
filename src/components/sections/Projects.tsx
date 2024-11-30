@@ -22,7 +22,7 @@ const projects = [
   - **Gérer les inscriptions** : ajouter ou modifier les participants pour chaque événement.
   - **Générer et imprimer** une liste complète des participants inscrits à un événement donné.
   Cette solution vise à améliorer l'efficacité du processus d'inscription tout en offrant une expérience utilisateur fluide et professionnelle.`,
-    image: "../../../public/image/Capture d'écran 2024-11-29 215745.png",
+    image: "https://bilal-ez-zaim.github.io/bilal-ezzaim/image/Capture d'écran 2024-11-29 215745.png",
     category: "mern",
     tags: [
       "React",
@@ -42,7 +42,7 @@ const projects = [
     description: `Topico est une plateforme de commerce électronique développée avec la MERN Stack
     Ce projet offre une interface utilisateur moderne et réactive construite avec React et stylisée avec Tailwind CSS. 
     Le backend, géré avec Node.js et Express, est conçu pour des performances optimales, tandis que MongoDB assure une gestion rapide et fiable des données.`,
-    image: "../../../public/image/toppic 3.png",
+    image: "https://bilal-ez-zaim.github.io/bilal-ezzaim/image/toppic 3.png",
     category: "mern",
     tags: [
       "React",
@@ -64,7 +64,7 @@ const projects = [
     JavaScript a été utilisé pour gérer les données et les interactions utilisateur, 
     tandis que HTML et CSS ont permis de créer un design attrayant et bien structuré. 
     Redux Toolkit est intégré pour une gestion efficace de l'état global de l'application.`,
-    image: "../../../public/image/book-store.png",
+    image: "https://bilal-ez-zaim.github.io/bilal-ezzaim/image/book-store.png",
     category: "react",
     tags: ["React", "TailwindCSS", "redux-toolkit"],
     github: "https://github.com/Bilal-EZ-ZAIM/Booke-Store.git",
@@ -76,7 +76,7 @@ const projects = [
     description: `Dubai Safari est une application frontend dédiée à l'affichage des voyages et de leurs horaires de manière claire et attrayante. 
     Construit avec **React**, ce projet propose une interface utilisateur simple, fluide et intuitive pour améliorer l'expérience des utilisateurs. 
     La navigation est assurée par **React Router**, et le design est soigneusement réalisé avec CSS.`,
-    image: "../../../public/image/Capture d'écran 2024-11-29 213824.png",
+    image: "https://bilal-ez-zaim.github.io/bilal-ezzaim/image/Capture d'écran 2024-11-29 213824.png",
     category: "react",
     tags: ["React", "Css", "react-router-dom"],
     github: "https://github.com/Bilal-EZ-ZAIM/dubai-Safari",
@@ -88,7 +88,7 @@ const projects = [
     description: `Mon portfolio est une application web développée avec React et React Router. Il présente une section détaillée sur mon parcours, mes compétences techniques, ainsi qu'une section pour mes projets réalisés. 
     L'interface est soignée avec une mise en page responsive, réalisée en CSS, offrant une expérience utilisateur fluide et agréable. 
     Ce portfolio permet également de me contacter facilement grâce à un formulaire de contact intégré.`,
-    image: "../../../public/image/protfolio.png",
+    image: "https://bilal-ez-zaim.github.io/bilal-ezzaim/image/protfolio.png",
     category: "react",
     tags: ["React", "CSS", "React Router"],
     github: "https://github.com/Bilal-EZ-ZAIM/MyProtfolio.git",

@@ -45,7 +45,7 @@ export function About() {
             className="relative"
           >
             <img
-              src="/image/bilal.png"
+              src="https://bilal-ez-zaim.github.io/bilal-ezzaim/image/bilal.png"
               loading="lazy"
               alt="Workspace"
               className="rounded-lg shadow-xl"

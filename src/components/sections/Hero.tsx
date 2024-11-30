@@ -77,7 +77,7 @@ export function Hero() {
             <div className="relative w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] mx-auto">
               <img
                 loading="lazy"
-                src="/image/bilal.png"
+                src="https://bilal-ez-zaim.github.io/bilal-ezzaim/image/bilal.png"
                 alt="Bilal Zaim"
                 className="rounded-full w-full h-full object-cover shadow-xl border-4 border-white"
               />
