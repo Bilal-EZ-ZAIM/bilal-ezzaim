@@ -45,11 +45,12 @@ export function About() {
             className="relative"
           >
             <img
-              src="../../../public/image/bilal.png"
+              src="/image/bilal.png"
               loading="lazy"
               alt="Workspace"
               className="rounded-lg shadow-xl"
             />
+
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-lg"></div>
           </motion.div>
         </div>
