@@ -1,9 +1,9 @@
-name: Deploy React App to GitHub Pages
+name: Deploy React App
 
 on:
   push:
     branches:
-      - main # أو الفرع الذي تستخدمه مثل master أو غيره
+      - main
 
 jobs:
   build:
@@ -11,20 +11,24 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
-          node-version: "16" # يمكنك تعديل هذا بناءً على النسخة التي تستخدمها
+          node-version: '16'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
+      - name: Build the project
         run: npm run build
 
+      - name: Set Git identity
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
       - name: Deploy to GitHub Pages
-        run: npm run deploy
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npm run deploy
