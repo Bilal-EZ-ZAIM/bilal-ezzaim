@@ -166,38 +166,44 @@ export function Projects() {
           Mes Projets
         </motion.h2>
 
-        <div className="flex justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
           <Button
             variant={filter === "all" ? "default" : "outline"}
             onClick={() => setFilter("all")}
+            className="w-full sm:w-auto"
           >
             Tout
           </Button>
           <Button
             variant={filter === "mern" ? "default" : "outline"}
             onClick={() => setFilter("mern")}
+            className="w-full sm:w-auto"
           >
             MERN
           </Button>
           <Button
             variant={filter === "react" ? "default" : "outline"}
             onClick={() => setFilter("react")}
+            className="w-full sm:w-auto"
           >
             React
           </Button>
           <Button
             variant={filter === "express" ? "default" : "outline"}
             onClick={() => setFilter("express")}
+            className="w-full sm:w-auto"
           >
             Express
           </Button>
           <Button
             variant={filter === "nest" ? "default" : "outline"}
             onClick={() => setFilter("nest")}
+            className="w-full sm:w-auto"
           >
             NestJS
           </Button>
         </div>
+
         <motion.div
           layout
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
