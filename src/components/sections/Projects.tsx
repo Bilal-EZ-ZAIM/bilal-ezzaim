@@ -11,9 +11,57 @@ import {
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
-type ProjectCategory = "all" | "mern" | "react" | "express";
+type ProjectCategory = "all" | "mern" | "react" | "express" | "nest";
 
 const projects = [
+  {
+    title: "Moride",
+    description: `Je suis ravi de vous présenter Moride, la version bêta de ma plateforme dédiée à la réservation de voyages et d'offres touristiques. Le site est actuellement en phase de test, et vos retours et suggestions sont les bienvenus pour l'améliorer. 🚀✨
+  
+  🔹 Technologies utilisées dans le développement de Moride :
+  
+  ✅ **Frontend :**
+  - **React ⚛️** : Bibliothèque puissante pour la création d'interfaces utilisateur interactives.
+  - **TypeScript 📝** : Ajoute des fonctionnalités de typage statique pour un code plus robuste.
+  - **Tailwind CSS 🎨** : Framework moderne pour un design flexible et réactif.
+  
+  ✅ **Backend :**
+  - **NestJS 🏗️** : Framework avancé pour le développement d’applications serveur performantes.
+  - **MongoDB 🗄️** : Base de données NoSQL rapide et flexible.
+  
+  ✅ **Gestion d'état :**
+  - **Redux Toolkit 🔄** : Outil performant pour simplifier la gestion de l’état dans les applications React.
+  
+  ✅ **Authentification et sécurité :**
+  - Système d’authentification complet 🔑 : Connexion sécurisée, y compris via Google.
+  - **Guards 🔐** : Mécanismes de protection avancés pour sécuriser les données et les accès.
+  
+  ✅ **Téléchargement d’images :**
+  - **Cloudinary 📸** : Service optimisé pour la gestion et l’optimisation des images.
+  
+  💡 Je vous invite à tester la plateforme et à partager vos impressions pour contribuer à son amélioration continue !
+  
+  🌐 [Moride](https://moride.vercel.app/)
+  
+  Vous pouvez également découvrir mes autres projets sur mon site personnel :
+  
+  👨‍💻 [Bilal Ezzaim](https://bilal-ez-zaim.github.io/bilal-ezzaim/)`,
+    image: "https://bilal-ez-zaim.github.io/bilal-ezzaim/image/moride.png",
+    category: "nest",
+    tags: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "NestJS",
+      "MongoDB",
+      "Redux Toolkit",
+      "Cloudinary",
+      "Google Auth",
+    ],
+    github: "https://github.com/Bilal-EZ-ZAIM/moride-front-end",
+    demo: "https://moride.vercel.app/",
+    blog: "",
+  },
   {
     title: "Sportify",
     description: `Sportify est une application web développée pour une organisation sportive afin de simplifier la gestion des événements et des inscriptions. 
@@ -22,7 +70,8 @@ const projects = [
   - **Gérer les inscriptions** : ajouter ou modifier les participants pour chaque événement.
   - **Générer et imprimer** une liste complète des participants inscrits à un événement donné.
   Cette solution vise à améliorer l'efficacité du processus d'inscription tout en offrant une expérience utilisateur fluide et professionnelle.`,
-    image: "https://bilal-ez-zaim.github.io/bilal-ezzaim/image/Capture d'écran 2024-11-29 215745.png",
+    image:
+      "https://bilal-ez-zaim.github.io/bilal-ezzaim/image/Capture d'écran 2024-11-29 215745.png",
     category: "mern",
     tags: [
       "React",
@@ -76,7 +125,8 @@ const projects = [
     description: `Dubai Safari est une application frontend dédiée à l'affichage des voyages et de leurs horaires de manière claire et attrayante. 
     Construit avec **React**, ce projet propose une interface utilisateur simple, fluide et intuitive pour améliorer l'expérience des utilisateurs. 
     La navigation est assurée par **React Router**, et le design est soigneusement réalisé avec CSS.`,
-    image: "https://bilal-ez-zaim.github.io/bilal-ezzaim/image/Capture d'écran 2024-11-29 213824.png",
+    image:
+      "https://bilal-ez-zaim.github.io/bilal-ezzaim/image/Capture d'écran 2024-11-29 213824.png",
     category: "react",
     tags: ["React", "Css", "react-router-dom"],
     github: "https://github.com/Bilal-EZ-ZAIM/dubai-Safari",
