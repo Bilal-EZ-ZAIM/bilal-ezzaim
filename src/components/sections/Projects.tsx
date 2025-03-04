@@ -191,12 +191,12 @@ export function Projects() {
           >
             Express
           </Button>
-          {/* <Button
+          <Button
             variant={filter === "nest" ? "default" : "outline"}
             onClick={() => setFilter("nest")}
           >
             NestJS
-          </Button> */}
+          </Button>
         </div>
         <motion.div
           layout
