@@ -211,5 +211,20 @@
             "date": "sept. 2023 - avr. 2025",
             "field": "Certificat de formation générale (CFG), Programmation / développeur informatique"
         }
+    },
+    "footer": {
+        "name": "Bilal Zaim",
+        "description": "Développeur full-stack passionné par la création d'applications web modernes et performantes.",
+        "navigation": "Navigation",
+        "links": {
+            "home": "Accueil",
+            "about": "À propos",
+            "experience": "Expérience",
+            "skills": "Compétences",
+            "projects": "Projets",
+            "github": "GitHub"
+        },
+        "contact": "Contact",
+        "rights": "Tous droits réservés."
     }
 }

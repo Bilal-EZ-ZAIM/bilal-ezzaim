@@ -211,5 +211,20 @@
             "date": "Sept. 2023 - Apr. 2025",
             "field": "General Training Certificate (CFG), Programming / Computer Developer"
         }
+    },
+    "footer": {
+        "name": "Bilal Zaim",
+        "description": "Full-stack developer passionate about creating modern and high-performance web applications.",
+        "navigation": "Navigation",
+        "links": {
+            "home": "Home",
+            "about": "About",
+            "experience": "Experience",
+            "skills": "Skills",
+            "projects": "Projects",
+            "github": "GitHub"
+        },
+        "contact": "Contact",
+        "rights": "All rights reserved."
     }
 }
