@@ -72,8 +72,10 @@ npm run build
 
 ## 📝 License
 
-MIT License
+All Rights Reserved © 2025 Bilal Ezzaim
+No part of this project may be copied, used, or modified without explicit written permission.
 
 ## 👤 Author
 
 **Bilal EZ-ZAIM**
+
