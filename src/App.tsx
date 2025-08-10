@@ -9,6 +9,7 @@ import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/Footer";
 import { Education } from "./components/sections/Education";
 import { Services } from "./components/sections/Services";
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
@@ -25,8 +26,11 @@ function App() {
           <Services />
           <Contact />
         </main>
+
         <Footer />
+        <Toaster position="top-right" reverseOrder={false} />
       </div>
+
     </ThemeProvider>
   );
 }

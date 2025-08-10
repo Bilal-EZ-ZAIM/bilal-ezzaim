@@ -131,7 +131,15 @@
             "email": "Email",
             "subject": "Subject",
             "message": "Message",
-            "sendMessage": "Send Message"
+            "sendMessage": "Send Message",
+            "sending": "Sending..."
+        },
+        "toast": {
+            "successTitle": "Success!",
+            "successDescription": "Your message has been sent successfully.",
+            "failDescription": "Failed to send message",
+            "errorTitle": "Error!",
+            "errorDescription": "Failed to send message. Please try again later."
         }
     },
     "services": {

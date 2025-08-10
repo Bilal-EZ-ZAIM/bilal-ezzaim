@@ -131,7 +131,15 @@
             "email": "البريد الإلكتروني",
             "subject": "الموضوع",
             "message": "الرسالة",
-            "sendMessage": "إرسال الرسالة"
+            "sendMessage": "إرسال الرسالة",
+            "sending": "جاري الإرسال..."
+        },
+        "toast": {
+            "successTitle": "نجاح!",
+            "successDescription": "تم إرسال رسالتك بنجاح.",
+            "failDescription": "فشل في إرسال الرسالة",
+            "errorTitle": "خطأ!",
+            "errorDescription": "فشل في إرسال الرسالة. يرجى المحاولة لاحقًا."
         }
     },
     "services": {

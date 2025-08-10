@@ -5,9 +5,59 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
+import { useState, FormEvent } from "react";
+import { toast } from 'react-hot-toast';
+
+interface FormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
 
 export function Contact() {
   const { t } = useTranslation();
+  const [isLoading, setIsLoading] = useState(false);
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const response = await fetch('https://express-email-sender-xi.vercel.app/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        toast.success(t("contactSection.toast.successDescription", "Your message has been sent successfully."));
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        throw new Error(data.message || t("contactSection.toast.failDescription", "Failed to send message"));
+      }
+    } catch (error) {
+      toast.error(t("contactSection.toast.failDescription", "Failed to send message"));
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <section id="contact" className="py-20 container mx-auto">
@@ -86,25 +136,49 @@ export function Contact() {
           >
             <Card>
               <CardContent className="p-6">
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={handleSubmit}>
                   <div>
-                    <Input placeholder={t("contactSection.form.fullName")} />
+                    <Input
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder={t("contactSection.form.fullName")}
+                      required
+                    />
                   </div>
                   <div>
-                    <Input type="email" placeholder={t("contactSection.form.email")} />
+                    <Input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder={t("contactSection.form.email")}
+                      required
+                    />
                   </div>
                   <div>
-                    <Input placeholder={t("contactSection.form.subject")} />
+                    <Input
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      placeholder={t("contactSection.form.subject")}
+                      required
+                    />
                   </div>
                   <div>
                     <Textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
                       placeholder={t("contactSection.form.message")}
                       className="min-h-[150px]"
+                      required
                     />
                   </div>
-                  <Button className="w-full" size="lg">
-                    {t("contactSection.form.sendMessage")}
+                  <Button className="w-full" size="lg" type="submit" disabled={isLoading}>
+                    {isLoading ? t("contactSection.form.sending") : t("contactSection.form.sendMessage")}
                   </Button>
+
                 </form>
               </CardContent>
             </Card>
