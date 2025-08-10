@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Mail, MapPin, Phone, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -6,6 +7,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
 
 export function Contact() {
+  const { t } = useTranslation();
+
   return (
     <section id="contact" className="py-20 container mx-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,7 +18,7 @@ export function Contact() {
           transition={{ duration: 0.5 }}
           className="text-3xl font-bold text-center mb-12"
         >
-          Contactez-moi
+          {t("contactSection.title")}
         </motion.h2>
         <div className="grid md:grid-cols-2 gap-12">
           <motion.div
@@ -30,10 +33,8 @@ export function Contact() {
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold">Email</h3>
-                  <p className="text-muted-foreground">
-                    bilalzaim499@gmail.com
-                  </p>
+                  <h3 className="font-semibold">{t("contactSection.email")}</h3>
+                  <p className="text-muted-foreground">bilalzaim499@gmail.com</p>
                 </div>
               </CardContent>
             </Card>
@@ -43,7 +44,7 @@ export function Contact() {
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold">Téléphone</h3>
+                  <h3 className="font-semibold">{t("contactSection.phone")}</h3>
                   <p className="text-muted-foreground">+212 648161077</p>
                 </div>
               </CardContent>
@@ -72,7 +73,7 @@ export function Contact() {
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold">Localisation</h3>
+                  <h3 className="font-semibold">{t("contactSection.location")}</h3>
                   <p className="text-muted-foreground">YouCode, Youssofia, Maroc</p>
                 </div>
               </CardContent>
@@ -87,19 +88,22 @@ export function Contact() {
               <CardContent className="p-6">
                 <form className="space-y-6">
                   <div>
-                    <Input placeholder="Nom complet" />
+                    <Input placeholder={t("contactSection.form.fullName")} />
                   </div>
                   <div>
-                    <Input type="email" placeholder="Email" />
+                    <Input type="email" placeholder={t("contactSection.form.email")} />
                   </div>
                   <div>
-                    <Input placeholder="Sujet" />
+                    <Input placeholder={t("contactSection.form.subject")} />
                   </div>
                   <div>
-                    <Textarea placeholder="Message" className="min-h-[150px]" />
+                    <Textarea
+                      placeholder={t("contactSection.form.message")}
+                      className="min-h-[150px]"
+                    />
                   </div>
                   <Button className="w-full" size="lg">
-                    Envoyer le message
+                    {t("contactSection.form.sendMessage")}
                   </Button>
                 </form>
               </CardContent>

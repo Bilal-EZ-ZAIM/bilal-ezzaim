@@ -2,38 +2,19 @@ import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Building2, Calendar } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export function Experience() {
-  const experiences = [
-    {
-      title: "Full-stack Developer - Fondation Mohammed VI",
-      date: "juil. 2025 - Aujourd’hui",
-      location: "Rabat-Salé-Kénitra, Maroc · Sur site",
-      description: `Développement et maintenance dʼune application web interne avec ASP.NET et C#.`,
-      skills: ["ASP.NET", "C#", ".NET Framework", "SQL", "SQL Server", "DevOps"],
-    },
-    {
-      title: "Full-stack Developer - Tbeninnovation",
-      date: "avr. 2025 - juin 2025",
-      location: "Meknès, Fès-Meknès, Maroc · À distance",
-      description: `Développement dʼun chat en temps réel (Express, WebSocket, PostgreSQL, Prisma) et création dʼun backend dʼupload (C#, intégration AWS S3).`,
-      skills: ["Node.js", "Express", "WebSocket", "PostgreSQL", "Prisma", "C#", "AWS S3"],
-    },
-    {
-      title: "Full-stack Developer - BOOKIZONE",
-      date: "mai 2024 - juil. 2024",
-      location: "Casablanca-Settat, Maroc",
-      description: `Stage de 3 mois où j'ai participé au projet "Gestion de Syndique", une application web et mobile pour la gestion de complexes résidentiels (Super Admin, Syndique, Résidents).`,
-      tasks: [
-        "Développement front-end et back-end",
-        "Intégration de Bootstrap et SweetAlert",
-        "Implémentation de services RESTful API",
-        "Gestion CRUD et authentification des utilisateurs",
-        "Validation des données et système d'e-mails",
-      ],
-      skills: ["Laravel", "PHP", "JavaScript", "CSS", "HTML", "Bootstrap", "SQL", "Flutter", "REST API"],
-    },
-  ];
+  const { t } = useTranslation();
+
+  const experiences = t("experience.experiences", { returnObjects: true }) as Array<{
+    title: string;
+    date: string;
+    location: string;
+    description: string;
+    tasks?: string[];
+    skills: string[];
+  }>;
 
   return (
     <section id="experience" className="py-20">
@@ -44,7 +25,7 @@ export function Experience() {
           transition={{ duration: 0.5 }}
           className="text-3xl font-bold text-center mb-12"
         >
-          Expérience Professionnelle
+          {t("experience.title")}
         </motion.h2>
 
         <div className="space-y-8">
@@ -71,7 +52,7 @@ export function Experience() {
                 <CardContent className="space-y-4">
                   <p className="text-muted-foreground">{exp.location}</p>
                   <p>{exp.description}</p>
-                  {exp.tasks && (
+                  {exp.tasks && exp.tasks.length > 0 && (
                     <ul className="list-disc list-inside space-y-1 text-muted-foreground">
                       {exp.tasks.map((task, i) => (
                         <li key={i}>{task}</li>

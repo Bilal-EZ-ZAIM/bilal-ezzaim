@@ -1,0 +1,215 @@
+{
+    "shortName": "بلال",
+    "home": "الرئيسية",
+    "about": "من أنا",
+    "skills": "المهارات",
+    "projects": "المشاريع",
+    "contact": "اتصل بي",
+    "hero": {
+        "greeting": "مرحباً، أنا",
+        "name": "بلال الزعيم",
+        "title": "مطور ويب شامل (Full-stack)",
+        "description": "شغوف بتطوير الويب الحديث وإنشاء تطبيقات مبتكرة",
+        "contactMe": "تواصل معي",
+        "myProjects": "مشاريعي"
+    },
+    "skillsList": {
+        "mernStack": "MERN Stack",
+        "react": "React",
+        "nodejs": "Node.js",
+        "mongodb": "MongoDB",
+        "tailwind": "Tailwind",
+        "javascript": "JavaScript",
+        "nestjs": "NestJS",
+        "nextjs": "Next.js"
+    },
+    "aboutSection": {
+        "title": "نبذة عني",
+        "paragraph1": "مرحباً! أنا بلال الزعيم، مطور MERN Stack شغوف، أبلغ من العمر 26 عاماً. خريج مدرسة YouCode سنة 2025، أكرس وقتي الآن لتطوير تطبيقات ويب حديثة وفعّالة.",
+        "paragraph2": "شغفي بتطوير الويب قادني إلى إتقان تقنيات MERN، مما مكنني من إنشاء تطبيقات متكاملة من الواجهة الخلفية إلى الواجهة الأمامية. أسعى دائماً لمواجهة تحديات جديدة وتعلم المزيد."
+    },
+    "experience": {
+        "title": "الخبرة المهنية",
+        "experiences": [
+            {
+                "title": "مطور ويب شامل - مؤسسة محمد السادس",
+                "date": "يوليو 2025 - حتى الآن",
+                "location": "الرباط-سلا-القنيطرة، المغرب · في المكتب",
+                "description": "تطوير وصيانة تطبيق ويب داخلي باستخدام ASP.NET و C#.",
+                "tasks": [],
+                "skills": [
+                    "ASP.NET",
+                    "C#",
+                    ".NET Framework",
+                    "SQL",
+                    "SQL Server",
+                    "DevOps"
+                ]
+            },
+            {
+                "title": "مطور ويب شامل - Tbeninnovation",
+                "date": "أبريل 2025 - يونيو 2025",
+                "location": "مكناس، فاس-مكناس، المغرب · عن بُعد",
+                "description": "تطوير دردشة فورية (Express، WebSocket، PostgreSQL، Prisma) وإنشاء واجهة خلفية لرفع الملفات (C#، تكامل AWS S3).",
+                "tasks": [],
+                "skills": [
+                    "Node.js",
+                    "Express",
+                    "WebSocket",
+                    "PostgreSQL",
+                    "Prisma",
+                    "C#",
+                    "AWS S3"
+                ]
+            },
+            {
+                "title": "مطور ويب شامل - BOOKIZONE",
+                "date": "مايو 2024 - يوليو 2024",
+                "location": "الدار البيضاء-سطات، المغرب",
+                "description": "تدريب لمدة 3 أشهر شاركت خلاله في مشروع \"إدارة السنديك\"، وهو تطبيق ويب وموبايل لإدارة المجمعات السكنية (مشرف عام، سنديك، سكان).",
+                "tasks": [
+                    "تطوير الواجهة الأمامية والخلفية",
+                    "دمج Bootstrap و SweetAlert",
+                    "تنفيذ خدمات RESTful API",
+                    "إدارة CRUD والمصادقة للمستخدمين",
+                    "التحقق من البيانات ونظام البريد الإلكتروني"
+                ],
+                "skills": [
+                    "Laravel",
+                    "PHP",
+                    "JavaScript",
+                    "CSS",
+                    "HTML",
+                    "Bootstrap",
+                    "SQL",
+                    "Flutter",
+                    "REST API"
+                ]
+            }
+        ]
+    },
+    "projectsSection": {
+        "title": "مشاريعي",
+        "filters": {
+            "all": "الكل",
+            "mern": "MERN",
+            "react": "React",
+            "express": "Express",
+            "nest": "NestJS"
+        },
+        "buttons": {
+            "github": "GitHub",
+            "demo": "عرض",
+            "more": "المزيد"
+        }
+    },
+    "skillsSection": {
+        "title": "مهاراتي",
+        "filters": {
+            "all": "الكل",
+            "languages": "اللغات",
+            "frameworks": "إطارات العمل",
+            "libraries": "المكتبات",
+            "database": "قواعد البيانات"
+        },
+        "categories": {
+            "languages": "اللغات",
+            "frontend": "الواجهة الأمامية",
+            "libraries": "المكتبات",
+            "backend": "الواجهة الخلفية",
+            "database": "قواعد البيانات",
+            "tools": "الأدوات"
+        }
+    },
+    "contactSection": {
+        "title": "تواصل معي",
+        "email": "البريد الإلكتروني",
+        "phone": "الهاتف",
+        "location": "الموقع",
+        "form": {
+            "fullName": "الاسم الكامل",
+            "email": "البريد الإلكتروني",
+            "subject": "الموضوع",
+            "message": "الرسالة",
+            "sendMessage": "إرسال الرسالة"
+        }
+    },
+    "services": {
+        "title": "خدماتي",
+        "subtitle": "حلول مخصصة لمشاريعك على الويب",
+        "fullStack": {
+            "title": "تطوير ويب شامل",
+            "description": "إنشاء تطبيقات ويب متكاملة وفعّالة باستخدام أحدث تقنيات MERN Stack.",
+            "features": [
+                "تطبيقات ويب مخصصة",
+                "واجهات برمجة تطبيقات RESTful",
+                "قواعد بيانات محسّنة",
+                "هندسة حديثة"
+            ]
+        },
+        "responsiveSites": {
+            "title": "مواقع متجاوبة",
+            "description": "تصميم مواقع ويب متكيفة توفر تجربة مستخدم مثالية على جميع الأجهزة.",
+            "features": [
+                "تصميم يعتمد على الأجهزة المحمولة أولاً",
+                "أداء محسن",
+                "توافق مع جميع المتصفحات",
+                "حركات سلسة"
+            ]
+        },
+        "backend": {
+            "title": "تطوير الواجهة الخلفية",
+            "description": "تطوير خوادم قوية وقابلة للتطوير باستخدام Node.js و Express.",
+            "features": [
+                "واجهات برمجة تطبيقات آمنة",
+                "مصادقة JWT",
+                "إدارة قواعد البيانات",
+                "خدمات مصغرة"
+            ]
+        },
+        "frontend": {
+            "title": "تطوير الواجهة الأمامية",
+            "description": "إنشاء واجهات مستخدم حديثة وتفاعلية باستخدام React.js.",
+            "features": [
+                "تصميم UI/UX حديث",
+                "إدارة الحالة العامة بـ Redux",
+                "مكونات قابلة لإعادة الاستخدام",
+                "تحسين الأداء"
+            ]
+        },
+        "uiux": {
+            "title": "تصميم UI/UX",
+            "description": "تصميم واجهات مستخدم بديهية وجذابة.",
+            "features": [
+                "تصميم عصري",
+                "تجربة مستخدم محسّنة",
+                "النمذجة الأولية",
+                "إرشادات التصميم"
+            ]
+        },
+        "deploy": {
+            "title": "النشر والصيانة",
+            "description": "نشر وصيانة تطبيقاتك بشكل مستمر.",
+            "features": [
+                "إعداد الخادم",
+                "نشر آلي",
+                "المراقبة",
+                "دعم فني"
+            ]
+        }
+    },
+    "education": {
+        "title": "التعليم",
+        "youCode": {
+            "institution": "YouCode المغرب",
+            "date": "سبتمبر 2023 - مايو 2025",
+            "field": "تطوير ويب شامل، برمجة الحاسوب",
+            "description": "YouCode هي مؤسسة لتعليم تطوير الويب بالشراكة مع UM6P و Simplon France و OCP. يقدم البرنامج تدريباً شاملاً في تطوير الويب الكامل باستخدام Laravel و Vue.js، متبوعاً بتخصص في Java Fullstack أو JavaScript Fullstack في السنة الثانية."
+        },
+        "simplon": {
+            "institution": "Simplon Grand Ouest",
+            "date": "سبتمبر 2023 - أبريل 2025",
+            "field": "شهادة التكوين العام (CFG)، برمجة / تطوير الحاسوب"
+        }
+    }
+}

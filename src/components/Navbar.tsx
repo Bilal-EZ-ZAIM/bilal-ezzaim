@@ -1,16 +1,19 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
 
   const menuItems = [
-    { title: "Home", href: "#home" },
-    { title: "About", href: "#about" },
-    { title: "Skills", href: "#skills" },
-    { title: "Projects", href: "#projects" },
-    { title: "Contact", href: "#contact" },
+    { title: t('home'), href: "#home" },
+    { title: t('about'), href: "#about" },
+    { title: t('skills'), href: "#skills" },
+    { title: t('projects'), href: "#projects" },
+    { title: t('contact'), href: "#contact" },
   ];
 
   return (
@@ -19,7 +22,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="text-xl font-bold text-black dark:text-foreground">
-            Bilal
+            {t('shortName')}
           </div>
 
           {/* Desktop Menu */}
@@ -34,11 +37,13 @@ export function Navbar() {
               </a>
             ))}
             <ThemeToggle />
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile Menu Toggle */}
           <div className="md:hidden flex items-center">
             <ThemeToggle />
+            <LanguageSwitcher />
             <button
               className="ml-4 p-2 text-black bg-white dark:bg-black dark:text-white rounded-md hover:bg-gray-200 dark:hover:bg-foreground/10 focus:outline-none transition"
               onClick={() => setIsOpen(!isOpen)}

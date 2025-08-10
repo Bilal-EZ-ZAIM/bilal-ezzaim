@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   Code2,
   Database,
@@ -16,11 +17,12 @@ type SkillCategory =
   | "languages"
   | "frameworks"
   | "libraries"
-  | "Database";
+  | "database"
+  | "tools";
 
 const skills = [
   {
-    title: "Langages",
+    titleKey: "languages",
     icon: Code2,
     category: "languages",
     items: [
@@ -28,45 +30,47 @@ const skills = [
       "CSS",
       "JavaScript",
       "TypeScript",
-      "Sql",
-      "NoSql",
-      "Php",
+      "SQL",
+      "NoSQL",
+      "PHP",
       "C",
     ],
   },
   {
-    title: "Frontend",
+    titleKey: "frontend",
     icon: Layout,
     category: "frameworks",
-    items: ["Next.js", "TailwindCSS", "Bootstrap"],
+    items: ["Next.js", "Tailwind CSS", "Bootstrap"],
   },
   {
-    title: "Libraries",
+    titleKey: "libraries",
     icon: Library,
     category: "libraries",
     items: ["React", "Redux", "Redux Toolkit", "Axios", "React-hook-form"],
   },
   {
-    title: "Backend",
+    titleKey: "backend",
     icon: Server,
     category: "frameworks",
     items: ["Node.js", "Express.js", "Nest.js"],
   },
   {
-    title: "Database",
+    titleKey: "database",
     icon: Database,
-    category: "Database",
+    category: "database",
     items: ["MongoDB", "PostgreSQL", "MySQL"],
   },
   {
-    title: "Outils",
+    titleKey: "tools",
     icon: Settings,
-    category: "Outils",
+    category: "tools",
     items: ["Git", "Docker", "VS Code", "Postman"],
   },
 ];
 
 export function Skills() {
+  const { t } = useTranslation();
+
   const [filter, setFilter] = useState<SkillCategory>("all");
 
   const filteredSkills = skills.filter(
@@ -74,7 +78,7 @@ export function Skills() {
   );
 
   return (
-    <section id="skills" className="py-20  container mx-auto">
+    <section id="skills" className="py-20 container mx-auto">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -82,40 +86,19 @@ export function Skills() {
           transition={{ duration: 0.5 }}
           className="text-3xl font-bold text-center mb-8"
         >
-          Mes Compétences
+          {t("skillsSection.title")}
         </motion.h2>
 
         <div className="flex justify-center gap-4 mb-12">
-          <Button
-            variant={filter === "all" ? "default" : "outline"}
-            onClick={() => setFilter("all")}
-          >
-            Tout
-          </Button>
-          <Button
-            variant={filter === "languages" ? "default" : "outline"}
-            onClick={() => setFilter("languages")}
-          >
-            Langages
-          </Button>
-          <Button
-            variant={filter === "frameworks" ? "default" : "outline"}
-            onClick={() => setFilter("frameworks")}
-          >
-            Frameworks
-          </Button>
-          <Button
-            variant={filter === "libraries" ? "default" : "outline"}
-            onClick={() => setFilter("libraries")}
-          >
-            Bibliothèques
-          </Button>
-          <Button
-            variant={filter === "Database" ? "default" : "outline"}
-            onClick={() => setFilter("Database")}
-          >
-            Database
-          </Button>
+          {(Object.keys(t("skillsSection.filters", { returnObjects: true })) as SkillCategory[]).map((key) => (
+            <Button
+              key={key}
+              variant={filter === key ? "default" : "outline"}
+              onClick={() => setFilter(key)}
+            >
+              {t(`skillsSection.filters.${key}`)}
+            </Button>
+          ))}
         </div>
 
         <motion.div
@@ -124,7 +107,7 @@ export function Skills() {
         >
           {filteredSkills.map((skill) => (
             <motion.div
-              key={skill.title}
+              key={skill.titleKey}
               layout
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -135,7 +118,7 @@ export function Skills() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <skill.icon className="h-5 w-5 text-primary" />
-                    {skill.title}
+                    {t(`skillsSection.categories.${skill.titleKey}`)}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>

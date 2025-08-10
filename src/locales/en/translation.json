@@ -1,0 +1,215 @@
+{
+    "shortName": "Bilal",
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "hero": {
+        "greeting": "Hi, I'm",
+        "name": "Bilal Ezzaim",
+        "title": "Full-stack Developer",
+        "description": "Passionate about modern web development and creating innovative applications",
+        "contactMe": "Contact Me",
+        "myProjects": "My Projects"
+    },
+    "skillsList": {
+        "mernStack": "MERN Stack",
+        "react": "React",
+        "nodejs": "Node.js",
+        "mongodb": "MongoDB",
+        "tailwind": "Tailwind",
+        "javascript": "JavaScript",
+        "nestjs": "NestJS",
+        "nextjs": "Next.js"
+    },
+    "aboutSection": {
+        "title": "About Me",
+        "paragraph1": "Hello! I'm Bilal Ezzaim, a passionate 26-year-old MERN Stack developer. A graduate of YouCode in 2025, I now focus on building modern and high-performance web applications.",
+        "paragraph2": "My passion for web development has led me to master the entire MERN stack, allowing me to create complete applications from backend to frontend. I am always looking for new challenges and learning opportunities."
+    },
+    "experience": {
+        "title": "Professional Experience",
+        "experiences": [
+            {
+                "title": "Full-stack Developer - Fondation Mohammed VI",
+                "date": "Jul 2025 - Present",
+                "location": "Rabat-Salé-Kénitra, Morocco · On site",
+                "description": "Development and maintenance of an internal web application using ASP.NET and C#.",
+                "tasks": [],
+                "skills": [
+                    "ASP.NET",
+                    "C#",
+                    ".NET Framework",
+                    "SQL",
+                    "SQL Server",
+                    "DevOps"
+                ]
+            },
+            {
+                "title": "Full-stack Developer - Tbeninnovation",
+                "date": "Apr 2025 - Jun 2025",
+                "location": "Meknès, Fès-Meknès, Morocco · Remote",
+                "description": "Development of a real-time chat (Express, WebSocket, PostgreSQL, Prisma) and backend upload (C#, AWS S3 integration).",
+                "tasks": [],
+                "skills": [
+                    "Node.js",
+                    "Express",
+                    "WebSocket",
+                    "PostgreSQL",
+                    "Prisma",
+                    "C#",
+                    "AWS S3"
+                ]
+            },
+            {
+                "title": "Full-stack Developer - BOOKIZONE",
+                "date": "May 2024 - Jul 2024",
+                "location": "Casablanca-Settat, Morocco",
+                "description": "3-month internship where I participated in the 'Gestion de Syndique' project, a web and mobile app for managing residential complexes (Super Admin, Syndique, Residents).",
+                "tasks": [
+                    "Front-end and back-end development",
+                    "Bootstrap and SweetAlert integration",
+                    "RESTful API services implementation",
+                    "CRUD and user authentication management",
+                    "Data validation and email system"
+                ],
+                "skills": [
+                    "Laravel",
+                    "PHP",
+                    "JavaScript",
+                    "CSS",
+                    "HTML",
+                    "Bootstrap",
+                    "SQL",
+                    "Flutter",
+                    "REST API"
+                ]
+            }
+        ]
+    },
+    "projectsSection": {
+        "title": "My Projects",
+        "filters": {
+            "all": "All",
+            "mern": "MERN",
+            "react": "React",
+            "express": "Express",
+            "nest": "NestJS"
+        },
+        "buttons": {
+            "github": "GitHub",
+            "demo": "Demo",
+            "more": "Learn More"
+        }
+    },
+    "skillsSection": {
+        "title": "My Skills",
+        "filters": {
+            "all": "All",
+            "languages": "Languages",
+            "frameworks": "Frameworks",
+            "libraries": "Libraries",
+            "database": "Database"
+        },
+        "categories": {
+            "languages": "Languages",
+            "frontend": "Frontend",
+            "libraries": "Libraries",
+            "backend": "Backend",
+            "database": "Database",
+            "tools": "Tools"
+        }
+    },
+    "contactSection": {
+        "title": "Contact Me",
+        "email": "Email",
+        "phone": "Phone",
+        "location": "Location",
+        "form": {
+            "fullName": "Full Name",
+            "email": "Email",
+            "subject": "Subject",
+            "message": "Message",
+            "sendMessage": "Send Message"
+        }
+    },
+    "services": {
+        "title": "My Services",
+        "subtitle": "Custom solutions for your web projects",
+        "fullStack": {
+            "title": "Full Stack Development",
+            "description": "Creating complete and performant web applications with the latest MERN Stack technologies.",
+            "features": [
+                "Custom web applications",
+                "RESTful APIs",
+                "Optimized databases",
+                "Modern architecture"
+            ]
+        },
+        "responsiveSites": {
+            "title": "Responsive Websites",
+            "description": "Design of adaptive websites offering optimal user experience on all devices.",
+            "features": [
+                "Mobile-first design",
+                "Optimized performance",
+                "Cross-browser compatibility",
+                "Smooth animations"
+            ]
+        },
+        "backend": {
+            "title": "Backend Development",
+            "description": "Development of robust and scalable servers with Node.js and Express.",
+            "features": [
+                "Secure APIs",
+                "JWT authentication",
+                "Database management",
+                "Microservices"
+            ]
+        },
+        "frontend": {
+            "title": "Frontend Development",
+            "description": "Creating modern and interactive user interfaces with React.js.",
+            "features": [
+                "Modern UI/UX",
+                "Global state with Redux",
+                "Reusable components",
+                "Performance optimization"
+            ]
+        },
+        "uiux": {
+            "title": "UI/UX Design",
+            "description": "Design of intuitive and aesthetic user interfaces.",
+            "features": [
+                "Modern design",
+                "Optimized user experience",
+                "Prototyping",
+                "Design guidelines"
+            ]
+        },
+        "deploy": {
+            "title": "Deployment & Maintenance",
+            "description": "Continuous deployment and maintenance of your applications.",
+            "features": [
+                "Server configuration",
+                "Automated deployment",
+                "Monitoring",
+                "Technical support"
+            ]
+        }
+    },
+    "education": {
+        "title": "Education",
+        "youCode": {
+            "institution": "YouCode Morocco",
+            "date": "Sept. 2023 - May 2025",
+            "field": "Full Stack Development, Computer Programming",
+            "description": "YouCode is a web development institute in partnership with UM6P, Simplon France, and OCP. The program offers comprehensive full-stack training with Laravel and Vue.js, followed by specialization in Java or JS full-stack in the second year."
+        },
+        "simplon": {
+            "institution": "Simplon Grand Ouest",
+            "date": "Sept. 2023 - Apr. 2025",
+            "field": "General Training Certificate (CFG), Programming / Computer Developer"
+        }
+    }
+}
