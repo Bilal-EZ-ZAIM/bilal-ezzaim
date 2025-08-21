@@ -16,7 +16,8 @@ export function LanguageSwitcher() {
     const languages: Language[] = [
         { code: 'fr', name: 'Français', flag: '🇫🇷', dir: 'ltr' },
         { code: 'en', name: 'English', flag: '🇬🇧', dir: 'ltr' },
-        { code: 'ar', name: 'العربية', flag: '🇲🇦', dir: 'rtl' }
+        { code: 'ar', name: 'العربية', flag: '🇲🇦', dir: 'rtl' },
+        { code: 'es', name: 'Español', flag: '�🇸', dir: 'ltr' }
     ];
 
     const changeLanguage = (lng: string, dir: 'ltr' | 'rtl'): void => {
