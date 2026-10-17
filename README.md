@@ -1,81 +1,83 @@
-# Personal Portfolio Website
+# Bilal Ezzaim — Full-Stack Developer Portfolio
 
-A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS.
+Personal portfolio website for **Bilal Ezzaim**, a full-stack developer working with .NET, Java/Spring Boot, React, and modern web technologies. The portfolio presents professional experience, selected projects, technical skills, education, and contact information.
 
-## 🚀 Features
+## Features
 
-- Responsive design
-- Dark/Light theme toggle
-- Modern UI components using Shadcn/ui
-- Sections for:
-  - Hero/Introduction
-  - About
-  - Experience
-  - Education
-  - Projects
-  - Skills
-  - Services
-  - Contact
+- Responsive portfolio with light and dark themes.
+- Multilingual interface in French, English, Arabic, and Spanish.
+- Right-to-left layout support for Arabic.
+- Hero section with a continuously moving technology slider.
+- Professional experience presented through project cards, ordered responsibilities, and technology badges.
+- Searchable skill categories covering Java, JavaScript, C#, databases, APIs, architecture, security, DevOps, tools, version control, and methodologies.
+- Dedicated sections for professional sectors, projects, education, services, and contact.
 
-## 🛠️ Technologies Used
+## Technology Stack
 
-- React + TypeScript
-- Vite
-- Tailwind CSS
-- Shadcn/ui Components
+- **Frontend:** React 18, TypeScript, Vite
+- **Styling:** Tailwind CSS, CSS, Radix UI
+- **Animation:** Framer Motion
+- **Internationalization:** i18next, react-i18next
+- **Icons:** Lucide React
+- **Deployment:** GitHub Pages with `gh-pages`
 
-## 🏗️ Project Structure
+## Getting Started
 
-```
-src/
-├── components/        # UI Components
-│   ├── sections/     # Main page sections
-│   └── ui/          # Reusable UI components
-├── hooks/           # Custom React hooks
-└── lib/            # Utility functions
-```
+### Requirements
 
-## 🚦 Getting Started
+- Node.js (LTS recommended)
+- npm
 
-1. Clone the repository:
+### Install and run locally
+
 ```bash
 git clone https://github.com/Bilal-EZ-ZAIM/bilal-ezzaim.git
-```
-
-2. Install dependencies:
-```bash
+cd bilal-ezzaim
 npm install
-```
-
-3. Start the development server:
-```bash
 npm run dev
 ```
 
-## 🛠️ Build
+Vite will print the local development URL in the terminal.
 
-To build for production:
-```bash
-npm run build
+## Available Scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the local development server. |
+| `npm run build` | Create the production build in `dist/`. |
+| `npm run preview` | Preview the production build locally. |
+| `npm run lint` | Run ESLint across the project. |
+| `npm run deploy` | Build and publish `dist/` to GitHub Pages. |
+
+## Project Structure
+
+```text
+src/
+├── components/
+│   ├── sections/       # Hero, About, Experience, Skills, Projects, and other page sections
+│   └── ui/             # Reusable UI components
+├── hooks/              # Custom React hooks
+├── lib/                # Shared utilities
+├── locales/            # French, English, Arabic, and Spanish translations
+└── i18n/               # Internationalization configuration
+public/
+└── image/              # Public images and portfolio assets
 ```
 
-## 🎨 Features and Sections
+## Deployment
 
-- **Hero Section**: Introduction and main call-to-action
-- **About**: Personal introduction and background
-- **Experience**: Work history and professional experience
-- **Education**: Academic background and qualifications
-- **Projects**: Showcase of personal and professional projects
-- **Skills**: Technical skills and competencies
-- **Services**: Professional services offered
-- **Contact**: Contact information and form
+The Vite base path is configured for the GitHub Pages project site at `/bilal-ezzaim/`. To deploy, ensure GitHub Pages is enabled for the repository, then run:
 
-## 📝 License
+```bash
+npm run deploy
+```
 
-All Rights Reserved © 2025 Bilal Ezzaim
-No part of this project may be copied, used, or modified without explicit written permission.
+The `predeploy` script builds the site before `gh-pages` publishes the generated `dist/` directory.
 
-## 👤 Author
+## Author
 
-**Bilal EZ-ZAIM**
+**Bilal Ezzaim** — Full-Stack Developer
 
+## License
+
+All rights reserved © 2025 Bilal Ezzaim. No part of this project may be copied, used, or modified without explicit written permission.

@@ -10,13 +10,14 @@ import { Footer } from "@/components/Footer";
 import { Education } from "./components/sections/Education";
 import { Services } from "./components/sections/Services";
 import { Toaster } from 'react-hot-toast';
+import "./App.css";
 
 function App() {
   return (
     <ThemeProvider defaultTheme="system" storageKey="portfolio-theme">
-      <div className="w-full min-h-screen  bg-background text-foreground overflow-hidden ">
+      <div className="min-h-screen w-full overflow-x-clip bg-background text-foreground">
         <Navbar />
-        <main className="flex flex-col justify-center  mx-auto w-full items-center">
+        <main className="mx-auto flex w-full flex-col">
           <Hero />
           <About />
           <Experience />

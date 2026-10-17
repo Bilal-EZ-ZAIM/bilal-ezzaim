@@ -60,13 +60,13 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 container mx-auto">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="scroll-mt-20 py-20 sm:py-24">
+      <div className="section-container">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-bold text-center mb-12"
+          className="section-heading mb-12 text-center"
         >
           {t("contactSection.title")}
         </motion.h2>
@@ -142,6 +142,7 @@ export function Contact() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
+                      aria-label={t("contactSection.form.fullName")}
                       placeholder={t("contactSection.form.fullName")}
                       required
                     />
@@ -152,6 +153,7 @@ export function Contact() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
+                      aria-label={t("contactSection.form.email")}
                       placeholder={t("contactSection.form.email")}
                       required
                     />
@@ -161,6 +163,7 @@ export function Contact() {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
+                      aria-label={t("contactSection.form.subject")}
                       placeholder={t("contactSection.form.subject")}
                       required
                     />
@@ -170,6 +173,7 @@ export function Contact() {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
+                      aria-label={t("contactSection.form.message")}
                       placeholder={t("contactSection.form.message")}
                       className="min-h-[150px]"
                       required

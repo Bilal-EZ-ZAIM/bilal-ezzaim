@@ -5,11 +5,18 @@
     "skills": "Habilidades",
     "projects": "Proyectos",
     "contact": "Contacto",
+    "navigation": {
+        "openMenu": "Abrir menú de navegación",
+        "closeMenu": "Cerrar menú de navegación",
+        "changeLanguage": "Cambiar idioma",
+        "toggleTheme": "Cambiar tema"
+    },
     "hero": {
+        "connect": "Conecta conmigo",
         "greeting": "Hola, soy",
         "name": "Bilal Ezzaim",
-        "title": "Desarrollador Full-stack",
-        "description": "Apasionado por el desarrollo web moderno y la creación de aplicaciones innovadoras",
+        "title": "Desarrollador Full-stack .NET / Java / React",
+        "description": "Desarrollo y mejoro aplicaciones web seguras y de alto rendimiento con .NET, C#, Java, Spring Boot, React, PostgreSQL y arquitecturas API modernas.",
         "contactMe": "Contáctame",
         "myProjects": "Mis Proyectos"
     },
@@ -25,25 +32,144 @@
     },
     "aboutSection": {
         "title": "Sobre Mí",
-        "paragraph1": "¡Hola! Soy Bilal Ezzaim, un desarrollador MERN Stack de 26 años apasionado. Graduado de YouCode en 2025, me dedico al desarrollo de aplicaciones web modernas y de alto rendimiento.",
-        "paragraph2": "Mi pasión por el desarrollo web me ha llevado a dominar toda la stack MERN, lo que me permite crear aplicaciones completas, desde el backend hasta el frontend. Siempre busco nuevos desafíos y oportunidades de aprendizaje."
+        "eyebrow": "Perfil profesional",
+        "paragraph1": "Hola, soy Bilal Ezzaim, desarrollador full-stack centrado en crear y evolucionar aplicaciones web con .NET, C#, React y tecnologías API modernas. También puedo trabajar con Java, Spring Boot y PostgreSQL.",
+        "paragraph2": "Con cerca de 18 meses de experiencia profesional, he contribuido a sistemas en producción en banca, salud y educación, trabajando en seguridad, rendimiento, integración de identidad y funcionalidades desde el backend hasta la interfaz.",
+        "sectorsTitle": "Soluciones para sectores esenciales",
+        "sectors": {
+            "banking": {
+                "title": "Banca y finanzas",
+                "description": "Funcionalidades de financiación, cálculos financieros y gestión de calendarios de crédito."
+            },
+            "healthcare": {
+                "title": "Salud",
+                "description": "Evolución y mejora de la fiabilidad de aplicaciones de negocio y flujos digitales."
+            },
+            "education": {
+                "title": "Educación",
+                "description": "Desarrollo y mantenimiento de plataformas para apoyar los procesos educativos."
+            }
+        }
     },
     "experience": {
         "title": "Experiencia Profesional",
+        "summaryLabel": "Casi 18 meses de experiencia",
+        "sectorsLabel": "Sectores",
+        "projectsLabel": "Proyectos destacados",
+        "contributionsLabel": "Responsabilidades y logros",
+        "technologyLabel": "Tecnologías y prácticas",
+        "summary": "Desarrollador full-stack con cerca de 18 meses de experiencia profesional, actualmente como prestador de servicios en FM6 Education para plataformas de salud, educación y banca.",
         "experiences": [
             {
-                "title": "Desarrollador Full-stack - Fundación Mohammed VI",
+                "title": "Desarrollador Full-stack — Fondation Mohammed VI (vía Avanta)",
                 "date": "jul. 2025 - Hoy",
-                "location": "Rabat-Salé-Kénitra, Marruecos · Presencial",
-                "description": "Desarrollo y mantenimiento de una aplicación web interna con ASP.NET y C#.",
-                "tasks": [],
+                "location": "Rabat, Marruecos",
+                "description": "Trabajo en aplicaciones de negocio de los sectores bancario, sanitario y educativo. Desarrollo de funcionalidades de negocio, evolución de sistemas existentes, integración de soluciones de autenticación, optimización de bases de datos y resolución de incidencias en producción.",
+                "sectors": ["Salud", "Educación", "Banca"],
+                "projects": [
+                    {
+                        "title": "IMTILAK — Mécanisme 5",
+                        "tasks": [
+                            "Desarrollé funcionalidades de negocio de Mécanisme 5 y apliqué las reglas de financiación asociadas.",
+                            "Creé el cuadro de amortización conforme a las reglas de negocio del mecanismo.",
+                            "Implementé validaciones de negocio en Controller.",
+                            "Creé y adapté vistas SQL Server y procedimientos almacenados para procesos de negocio y cálculos financieros.",
+                            "Generé el archivo de respuesta."
+                        ],
+                        "technologies": ["C#", "ASP.NET MVC", "SQL Server", "T-SQL", "Entity Framework"]
+                    },
+                    {
+                        "title": "IMTILAK — Reescalonamiento de créditos",
+                        "tasks": [
+                            "Desarrollé funcionalidades de negocio para el reescalonamiento de créditos.",
+                            "Anulé el cuadro de amortización anterior y generé uno nuevo según las nuevas condiciones de reescalonamiento.",
+                            "Implementé y adapté validaciones de negocio en Controller.",
+                            "Creé y adapté vistas SQL Server y procedimientos almacenados para gestionar cuotas y procesos relacionados.",
+                            "Generé el archivo de respuesta."
+                        ],
+                        "technologies": ["C#", "ASP.NET MVC", "SQL Server", "T-SQL", "Entity Framework"]
+                    },
+                    {
+                        "title": "YASSIR — Evolución de la aplicación y procesos SQL",
+                        "tasks": [
+                            "Creé y adapté vistas SQL Server para estructurar los datos necesarios para las funcionalidades de negocio.",
+                            "Analicé y adapté consultas SQL según las necesidades funcionales.",
+                            "Evolucioné procesos de negocio y verifiqué la coherencia entre los datos y la aplicación."
+                        ],
+                        "technologies": ["C#", "SQL Server", "T-SQL"]
+                    },
+                    {
+                        "title": "Préscolaire — Verificación OTP",
+                        "tasks": [
+                            "Integré la verificación OTP por correo electrónico con SMTP/Gmail y por WhatsApp.",
+                            "Implementé la generación y validación de códigos y la gestión del flujo y de la sesión.",
+                            "Validé el OTP antes de guardar los datos de contacto."
+                        ],
+                        "technologies": ["C#", "ASP.NET MVC", ".NET Framework", "SMTP", "Gmail", "WhatsApp"]
+                    },
+                    {
+                        "title": "Back-office — Formularios y rendimiento",
+                        "tasks": [
+                            "Optimicé los procesos de la aplicación, el acceso a datos y la paginación.",
+                            "Adapte el mapeo de datos, las consultas, los índices y la carga de entidades (Lazy Loading).",
+                            "Mejoré el tratamiento de archivos e imágenes, corregí vulnerabilidades XSS y mantuve funcionalidades existentes."
+                        ],
+                        "technologies": ["C#", ".NET", "Entity Framework", "SQL Server", "LINQ"]
+                    },
+                    {
+                        "title": "Servicios WCF — Registro y mantenimiento",
+                        "tasks": [
+                            "Implementé el sistema completo de registro de logs para los servicios WCF.",
+                            "Diagnostiqué y corregí errores en los servicios existentes.",
+                            "Adapté los servicios a la nueva base de datos SQL Server y a los cambios en el intercambio de datos.",
+                            "Analicé logs y resolví incidencias de IIS relacionadas con Application Pools."
+                        ],
+                        "technologies": ["C#", "WCF", "SQL Server", "IIS", "Logging"]
+                    },
+                    {
+                        "title": "Autenticación Microsoft Entra ID",
+                        "tasks": [
+                            "Participé en la integración de Microsoft Entra ID entre IMTILAK Back-Office y YASSIR.",
+                            "Adapte la configuración OIDC/OWIN y la gestión de identificadores de usuario y datos asociados."
+                        ],
+                        "technologies": ["Microsoft Entra ID", "Azure AD", "OpenID Connect", "OWIN", "C#"]
+                    },
+                    {
+                        "title": "Producción y despliegues",
+                        "tasks": [
+                            "Participé en despliegues y actualizaciones de aplicaciones en IIS.",
+                            "Diagnostiqué incidencias en entornos de prueba, preproducción y producción y analicé logs de aplicación y SQL Server.",
+                            "Colaboré en la mejora de pipelines CI/CD con GitHub Actions y Docker."
+                        ],
+                        "technologies": ["IIS", "GitHub Actions", "Docker", "Docker Hub", "Logging", "CI/CD"]
+                    }
+                ],
+                "tasks": [
+                    "Desarrollo y evolución de funcionalidades de negocio, incluidos procesos de financiación, reglas de negocio y cálculos financieros.",
+                    "Creación y adaptación de vistas y procedimientos almacenados de SQL Server; optimización de consultas, paginación y acceso a datos.",
+                    "Integración y adaptación de flujos de autenticación OTP y Microsoft Entra ID / OpenID Connect.",
+                    "Diagnóstico de incidencias, corrección de defectos y mantenimiento de aplicaciones y servicios en producción."
+                ],
                 "skills": [
+                    "ASP.NET MVC",
                     "ASP.NET",
                     "C#",
                     ".NET Framework",
-                    "SQL",
                     "SQL Server",
-                    "DevOps"
+                    "T-SQL",
+                    "Entity Framework",
+                    "LINQ",
+                    "WCF",
+                    "Microsoft Entra ID",
+                    "OpenID Connect",
+                    "OWIN",
+                    "OTP",
+                    "SMTP / Gmail",
+                    "WhatsApp",
+                    "IIS",
+                    "GitHub Actions",
+                    "Docker",
+                    "XSS"
                 ]
             },
             {
@@ -51,7 +177,10 @@
                 "date": "abr. 2025 - jun. 2025",
                 "location": "Meknès, Fès-Meknès, Marruecos · Remoto",
                 "description": "Desarrollo de un chat en tiempo real (Express, WebSocket, PostgreSQL, Prisma) y creación de un backend de subida (C#, integración AWS S3).",
-                "tasks": [],
+                "tasks": [
+                    "Desarrollé funciones de mensajería en tiempo real con Express y WebSockets.",
+                    "Implementé la carga de archivos en el backend con C# e integración de AWS S3."
+                ],
                 "skills": [
                     "Node.js",
                     "Express",
@@ -105,20 +234,36 @@
     },
     "skillsSection": {
         "title": "Mis Habilidades",
+        "eyebrow": "Stack tecnológico",
+        "subtitle": "Un resumen de las tecnologías que utilizo para crear y evolucionar aplicaciones web modernas.",
+        "filterLabel": "Filtrar habilidades por categoría",
+        "resultsCount": "{{count}} habilidades mostradas",
         "filters": {
             "all": "Todo",
-            "languages": "Lenguajes",
-            "frameworks": "Frameworks",
-            "libraries": "Librerías",
-            "database": "Base de datos"
+            "java": "Stack Java",
+            "javascript": "Stack JavaScript",
+            "csharp": "Stack C#",
+            "database": "Bases de datos",
+            "api": "API e integraciones",
+            "devops": "DevOps",
+            "architecture": "Arquitectura",
+            "security": "Seguridad",
+            "tools": "Herramientas y métodos",
+            "versionControl": "Control de versiones",
+            "methodologies": "Metodologías"
         },
         "categories": {
-            "languages": "Lenguajes",
-            "frontend": "Frontend",
-            "libraries": "Librerías",
-            "backend": "Backend",
-            "database": "Base de datos",
-            "tools": "Herramientas"
+            "java": "Stack Java",
+            "javascript": "Stack JavaScript",
+            "csharp": "Stack C#",
+            "database": "Bases de datos",
+            "api": "API e integraciones",
+            "devops": "DevOps",
+            "architecture": "Arquitectura de software",
+            "security": "Seguridad e identidad",
+            "tools": "Herramientas y métodos de trabajo",
+            "versionControl": "Control de versiones",
+            "methodologies": "Metodologías"
         }
     },
     "contactSection": {

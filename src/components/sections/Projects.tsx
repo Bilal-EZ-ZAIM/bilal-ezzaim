@@ -287,13 +287,13 @@ export function Projects() {
   );
 
   return (
-    <section id="projects" className="py-20 bg-muted/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="scroll-mt-20 bg-muted/35 py-20 sm:py-24">
+      <div className="section-container">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-bold text-center mb-8"
+          className="section-heading mb-8 text-center"
         >
           {t("projectsSection.title")}
         </motion.h2>
@@ -305,7 +305,7 @@ export function Projects() {
                 key={cat}
                 variant={filter === cat ? "default" : "outline"}
                 onClick={() => setFilter(cat)}
-                className="w-full sm:w-auto"
+                  className="rounded-full px-4"
               >
                 {t(`projectsSection.filters.${cat}`)}
               </Button>
@@ -326,16 +326,16 @@ export function Projects() {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3 }}
             >
-              <Card className="overflow-hidden h-full flex flex-col">
+              <Card className="group flex h-full flex-col overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title[lang]}
                   loading="lazy"
-                  className="w-full h-48 object-cover"
+                  className="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
                 <CardHeader>
-                  <CardTitle>{project.title[lang]}</CardTitle>
-                  <CardDescription>
+                  <CardTitle className="text-lg">{project.title[lang]}</CardTitle>
+                  <CardDescription className="whitespace-pre-line leading-6">
                     {project.description[lang].length > 200
                       ? `${project.description[lang].substring(0, 200)}...`
                       : project.description[lang]}
@@ -353,7 +353,7 @@ export function Projects() {
                     ))}
                   </div>
                 </CardContent>
-                <CardFooter className="gap-2">
+                <CardFooter className="flex-wrap gap-2">
                   <Button variant="outline" size="sm" asChild>
                     <a
                       href={project.github}

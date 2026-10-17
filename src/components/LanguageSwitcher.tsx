@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Button } from './ui/button';
 
 export function LanguageSwitcher() {
-    const { i18n } = useTranslation();
+    const { i18n, t } = useTranslation();
     const [open, setOpen] = useState(false);
 
     interface Language {
@@ -17,7 +17,7 @@ export function LanguageSwitcher() {
         { code: 'fr', name: 'Français', flag: '🇫🇷', dir: 'ltr' },
         { code: 'en', name: 'English', flag: '🇬🇧', dir: 'ltr' },
         { code: 'ar', name: 'العربية', flag: '🇲🇦', dir: 'rtl' },
-        { code: 'es', name: 'Español', flag: '�🇸', dir: 'ltr' }
+        { code: 'es', name: 'Español', flag: '🇪🇸', dir: 'ltr' }
     ];
 
     const changeLanguage = (lng: string, dir: 'ltr' | 'rtl'): void => {
@@ -29,22 +29,22 @@ export function LanguageSwitcher() {
     return (
         <div className="relative">
             <Button
+                aria-label={t("navigation.changeLanguage")}
                 onClick={() => setOpen(!open)}
                 variant="outline"
-                className="ml-4 px-4 py-2 rounded-full font-semibold shadow-sm 
-                           transition-all duration-200 hover:bg-blue-50 dark:hover:bg-blue-900"
+                className="rounded-full border-border/70 px-3 font-semibold shadow-none transition-colors hover:bg-muted"
             >
                 {languages.find(lang => lang.code === i18n.language)?.flag}{" "}
                 {i18n.language.toUpperCase()}
             </Button>
 
             {open && (
-                <div className="absolute right-0 mt-2 w-40 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50">
+                <div className="absolute end-0 z-50 mt-2 w-40 overflow-hidden rounded-xl border border-border bg-popover p-1 text-popover-foreground shadow-xl">
                     {languages.map(lang => (
                         <button
                             key={lang.code}
                             onClick={() => changeLanguage(lang.code, lang.dir)}
-                            className={`w-full text-left px-4 py-2 flex items-center gap-2  hover:bg-gray-100 dark:hover:bg-gray-700 dark:bg-black bg-white ${i18n.language === lang.code ? "bg-gray-100 dark:bg-gray-700 font-bold" : ""
+                            className={`w-full rounded-lg px-3 py-2 text-left flex items-center gap-2 transition-colors hover:bg-muted ${i18n.language === lang.code ? "bg-muted font-bold text-foreground" : "text-muted-foreground"
                                 }`}
                         >
                             <span>{lang.flag}</span> {lang.name}

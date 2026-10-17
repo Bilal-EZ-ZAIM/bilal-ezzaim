@@ -1,130 +1,334 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
+  Boxes,
+  Braces,
   Code2,
+  Coffee,
   Database,
-  Layout,
-  Library,
-  Server,
-  Settings,
+  GitBranch,
+  ShieldCheck,
+  Sparkles,
+  Workflow,
+  Wrench,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+
 
 type SkillCategory =
   | "all"
-  | "languages"
-  | "frameworks"
-  | "libraries"
+  | "java"
+  | "javascript"
+  | "csharp"
   | "database"
-  | "tools";
+  | "api"
+  | "devops"
+  | "architecture"
+  | "security"
+  | "tools"
+  | "versionControl"
+  | "methodologies";
+
+const filterOptions: SkillCategory[] = [
+  "all",
+  "java",
+  "javascript",
+  "csharp",
+  "database",
+  "api",
+  "architecture",
+  "security",
+  "devops",
+  "tools",
+  "versionControl",
+  "methodologies",
+];
+
 
 const skills = [
   {
-    titleKey: "languages",
-    icon: Code2,
-    category: "languages",
+    titleKey: "java",
+    icon: Coffee,
+    category: "java",
     items: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "TypeScript",
-      "SQL",
-      "NoSQL",
-      "PHP",
-      "C",
+      "Java",
+      "Spring Boot",
+      "Spring Data JPA",
+      "Spring Security",
+      "Hibernate",
+      "Lombok",
+      "MapStruct",
+      "Maven",
+      "JUnit",
     ],
   },
   {
-    titleKey: "frontend",
-    icon: Layout,
-    category: "frameworks",
-    items: ["Next.js", "Tailwind CSS", "Bootstrap"],
+    titleKey: "javascript",
+    icon: Braces,
+    category: "javascript",
+    items: [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "NestJS",
+      "Express.js",
+      "react-i18next",
+      "Prisma",
+      "Redux",
+      "Redux Toolkit",
+      "Axios",
+      "React Hook Form",
+      "Tailwind CSS",
+      "Bootstrap",
+    ],
   },
   {
-    titleKey: "libraries",
-    icon: Library,
-    category: "libraries",
-    items: ["React", "Redux", "Redux Toolkit", "Axios", "React-hook-form"],
-  },
-  {
-    titleKey: "backend",
-    icon: Server,
-    category: "frameworks",
-    items: ["Node.js", "Express.js", "Nest.js"],
+    titleKey: "csharp",
+    icon: Code2,
+    category: "csharp",
+    items: [
+      "C#",
+      "ASP.NET MVC",
+      ".NET Framework",
+      "Entity Framework",
+      "WCF",
+      "REST APIs",
+    ],
   },
   {
     titleKey: "database",
     icon: Database,
     category: "database",
-    items: ["MongoDB", "PostgreSQL", "MySQL"],
+    items: [
+      "SQL Server",
+      "T-SQL",
+      "Stored Procedures",
+      "SQL Views",
+      "SQL Functions",
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+    ],
+  },
+  {
+    titleKey: "api",
+    icon: Workflow,
+    category: "api",
+    items: [
+      "REST APIs",
+      "SOAP",
+      "WebSockets",
+    ],
+  },
+  {
+    titleKey: "architecture",
+    icon: Boxes,
+    category: "architecture",
+    items: [
+      "Object-Oriented Programming (OOP)",
+      "MVC Architecture",
+      "Layered Architecture",
+      "Service Layer",
+      "Repository Pattern",
+      "Modular Architecture",
+    ],
+  },
+  {
+    titleKey: "security",
+    icon: ShieldCheck,
+    category: "security",
+    items: [
+      "Spring Security",
+      "JWT",
+      "Microsoft Entra ID",
+      "OpenID Connect",
+      "OTP Authentication",
+      "Application Security",
+    ],
+  },
+  {
+    titleKey: "devops",
+    icon: Workflow,
+    category: "devops",
+    items: [
+      "GitHub Actions",
+      "CI/CD",
+      "Docker",
+      "Docker Hub",
+      "YAML",
+    ],
   },
   {
     titleKey: "tools",
-    icon: Settings,
+    icon: Wrench,
     category: "tools",
-    items: ["Git", "Docker", "VS Code", "Postman"],
+    items: [
+      "Postman",
+      "Visual Studio Code",
+    ],
   },
+  {
+    titleKey: "versionControl",
+    icon: GitBranch,
+    category: "versionControl",
+    items: [
+      "Git",
+      "GitHub",
+      "GitLab",
+    ],
+  },
+
+  {
+    titleKey: "methodologies",
+    icon: Sparkles,
+    category: "methodologies",
+    items: [
+      "Agile",
+      "Scrum",
+      "Sprint Planning",
+      "Daily Scrum",
+      "Sprint Review",
+      "Sprint Retrospective",
+      "Product Backlog",
+    ],
+  },
+
 ];
+
+
 
 export function Skills() {
   const { t } = useTranslation();
-
   const [filter, setFilter] = useState<SkillCategory>("all");
 
   const filteredSkills = skills.filter(
     (skill) => filter === "all" || skill.category === filter
   );
+  const visibleSkillCount = filteredSkills.reduce(
+    (total, skill) => total + skill.items.length,
+    0
+  );
 
   return (
-    <section id="skills" className="py-20 container mx-auto">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.h2
+    <section
+      id="skills"
+      className="relative isolate scroll-mt-20 overflow-hidden bg-muted/30 py-20 sm:py-24"
+    >
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-24 top-10 h-72 w-72 rounded-full bg-primary/[0.07] blur-3xl"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-28 -left-24 h-80 w-80 rounded-full bg-sky-400/[0.08] blur-3xl"
+      />
+
+      <div className="section-container relative">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-bold text-center mb-8"
+          className="mx-auto mb-10 max-w-3xl text-center sm:mb-12"
         >
-          {t("skillsSection.title")}
-        </motion.h2>
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/15 bg-primary/5 px-4 py-1.5 text-sm font-semibold text-primary">
+            <Sparkles className="h-4 w-4" />
+            {t("skillsSection.eyebrow")}
+          </div>
+          <h2 className="section-heading">{t("skillsSection.title")}</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
+            {t("skillsSection.subtitle")}
+          </p>
+        </motion.div>
 
-        <div className="flex justify-center gap-4 mb-12">
-          {(Object.keys(t("skillsSection.filters", { returnObjects: true })) as SkillCategory[]).map((key) => (
-            <Button
-              key={key}
-              variant={filter === key ? "default" : "outline"}
-              onClick={() => setFilter(key)}
-            >
-              {t(`skillsSection.filters.${key}`)}
-            </Button>
-          ))}
+        <div className="mx-auto mb-8 max-w-5xl rounded-2xl border border-border/70 bg-background/75 p-2 shadow-sm backdrop-blur sm:p-3">
+          <div
+            aria-label={t("skillsSection.filterLabel")}
+            className="flex gap-2 overflow-x-auto pb-1 sm:flex-wrap sm:justify-center sm:overflow-visible sm:pb-0"
+            role="group"
+          >
+            {filterOptions.map((key) => {
+              const count =
+                key === "all"
+                  ? skills.reduce((total, skill) => total + skill.items.length, 0)
+                  : skills
+                    .filter((skill) => skill.category === key)
+                    .reduce((total, skill) => total + skill.items.length, 0);
+
+              return (
+                <motion.button
+                  key={key}
+                  type="button"
+                  whileTap={{ scale: 0.96 }}
+                  aria-pressed={filter === key}
+                  onClick={() => setFilter(key)}
+                  className={`inline-flex min-h-10 shrink-0 items-center gap-2 rounded-xl px-3.5 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${filter === key
+                    ? "bg-primary text-primary-foreground shadow-md shadow-primary/20"
+                    : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                    }`}
+                >
+                  <span>{t(`skillsSection.filters.${key}`)}</span>
+                  <span
+                    className={`min-w-6 rounded-full px-1.5 py-0.5 text-xs tabular-nums ${filter === key
+                      ? "bg-primary-foreground/20 text-primary-foreground"
+                      : "bg-muted text-muted-foreground"
+                      }`}
+                  >
+                    {count}
+                  </span>
+                </motion.button>
+              );
+            })}
+          </div>
         </div>
 
-        <motion.div
-          layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        <div
+          aria-live="polite"
+          className="mb-5 flex items-center justify-between gap-3 text-sm text-muted-foreground"
         >
-          {filteredSkills.map((skill) => (
+          <span>{t(`skillsSection.filters.${filter}`)}</span>
+          <span className="inline-flex items-center gap-1.5">
+            <Braces className="h-4 w-4 text-primary" />
+            {t("skillsSection.resultsCount", { count: visibleSkillCount })}
+          </span>
+        </div>
+
+        <motion.div layout className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {filteredSkills.map((skill, index) => (
             <motion.div
               key={skill.titleKey}
               layout
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.3 }}
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 14 }}
+              transition={{ duration: 0.25, delay: index * 0.04 }}
             >
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <skill.icon className="h-5 w-5 text-primary" />
-                    {t(`skillsSection.categories.${skill.titleKey}`)}
+              <Card className="group h-full overflow-hidden border-border/70 bg-card/90 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/[0.06]">
+                <CardHeader className="pb-4">
+                  <CardTitle className="flex items-center justify-between gap-3">
+                    <span className="flex min-w-0 items-center gap-3">
+                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/15 to-sky-400/10 text-primary ring-1 ring-primary/10 transition-transform duration-300 group-hover:scale-105">
+                        <skill.icon className="h-5 w-5" />
+                      </span>
+                      <span className="truncate text-base font-bold">
+                        {t(`skillsSection.categories.${skill.titleKey}`)}
+                      </span>
+                    </span>
+                    <span className="rounded-full bg-muted px-2.5 py-1 text-xs font-semibold tabular-nums text-muted-foreground">
+                      {skill.items.length}
+                    </span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="list-disc list-inside space-y-2">
+                  <ul className="flex flex-wrap gap-2">
                     {skill.items.map((item) => (
-                      <li key={item} className="text-muted-foreground">
+                      <li
+                        key={item}
+                        className="rounded-lg border border-border/70 bg-background px-3 py-1.5 text-sm font-medium text-foreground/80 transition-colors hover:border-primary/30 hover:bg-primary/5 hover:text-primary"
+                      >
                         {item}
                       </li>
                     ))}
