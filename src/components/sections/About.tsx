@@ -103,8 +103,11 @@ export function About() {
               className="absolute -end-2 top-[12%] h-28 w-28 rounded-full bg-violet-400/25 blur-2xl"
             />
             <img
-              src={`${import.meta.env.BASE_URL}image/bilal-cutout.png`}
+              src={`${import.meta.env.BASE_URL}image/bilal-cutout.webp`}
               loading="lazy"
+              decoding="async"
+              width={577}
+              height={509}
               alt={t("hero.name")}
               className="relative z-10 aspect-[1/0.96] w-full object-contain object-bottom drop-shadow-xl"
             />

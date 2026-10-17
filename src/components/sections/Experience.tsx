@@ -53,14 +53,8 @@ export function Experience() {
         </motion.div>
 
         <div className="space-y-8">
-          {experiences.map((exp, index) => (
-            <motion.article
-              key={`${exp.title}-${exp.date}`}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
-              transition={{ duration: 0.45, delay: index * 0.08 }}
-            >
+          {experiences.map((exp) => (
+            <article key={`${exp.title}-${exp.date}`}>
               <Card className="group overflow-hidden">
                 <div className="h-1 bg-gradient-to-r from-primary via-sky-400 to-primary/20" />
                 <CardContent className="p-5 sm:p-8">
@@ -199,7 +193,7 @@ export function Experience() {
                   </div>
                 </CardContent>
               </Card>
-            </motion.article>
+            </article>
           ))}
         </div>
       </div>

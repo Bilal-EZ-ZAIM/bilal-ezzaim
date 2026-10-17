@@ -78,7 +78,7 @@ Téléchargement d’images :
 رفع الصور:
 - Cloudinary`,
     },
-    image: "https://bilal-ez-zaim.github.io/bilal-ezzaim/image/moride.png",
+    image: `${import.meta.env.BASE_URL}image/moride.webp`,
     category: "nest",
     tags: {
       en: ["React", "TypeScript", "Tailwind CSS", "NestJS", "MongoDB", "Redux Toolkit", "Cloudinary", "Google Auth"],
@@ -116,8 +116,7 @@ Fonctionnalités :
 - إدارة التسجيلات (إضافة، تعديل المشاركين)
 - إنشاء وطباعة قوائم المشاركين`,
     },
-    image:
-      "https://bilal-ez-zaim.github.io/bilal-ezzaim/image/Capture d'écran 2024-11-29 215745.png",
+    image: `${import.meta.env.BASE_URL}image/sportify.webp`,
     category: "mern",
     tags: {
       en: ["React", "TypeScript", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
@@ -149,7 +148,7 @@ Backend géré avec Node.js, Express, et MongoDB pour une gestion rapide et fiab
 واجهة مستخدم حديثة ومتجاوبة مبنية بـ React و Tailwind CSS.
 الخلفية مدعومة بـ Node.js و Express و MongoDB لإدارة بيانات سريعة وموثوقة.`,
     },
-    image: "https://bilal-ez-zaim.github.io/bilal-ezzaim/image/toppic 3.png",
+    image: `${import.meta.env.BASE_URL}image/topico.webp`,
     category: "mern",
     tags: {
       en: ["React", "Node.js", "MongoDB", "Express", "axios", "redux-toolkit", "Tailwind CSS"],
@@ -187,7 +186,7 @@ JavaScript يدير البيانات والتفاعلات.
 HTML و CSS يوفران تصميماً جذاباً.
 Redux Toolkit يدير الحالة العامة بكفاءة.`,
     },
-    image: "https://bilal-ez-zaim.github.io/bilal-ezzaim/image/book-store.png",
+    image: `${import.meta.env.BASE_URL}image/book-store.webp`,
     category: "react",
     tags: {
       en: ["React", "TailwindCSS", "redux-toolkit"],
@@ -222,8 +221,7 @@ Design soigné avec CSS.`,
 التنقل يتم عبر React Router.
 تم تصميمه بعناية باستخدام CSS.`,
     },
-    image:
-      "https://bilal-ez-zaim.github.io/bilal-ezzaim/image/Capture d'écran 2024-11-29 213824.png",
+    image: `${import.meta.env.BASE_URL}image/dubai-safari.webp`,
     category: "react",
     tags: {
       en: ["React", "Css", "react-router-dom"],
@@ -258,7 +256,7 @@ Comprend un formulaire de contact intégré pour une communication facile.`,
 تصميم متجاوب باستخدام CSS لتجربة مستخدم سلسة.
 يتضمن نموذج اتصال مدمج للتواصل السهل.`,
     },
-    image: "https://bilal-ez-zaim.github.io/bilal-ezzaim/image/protfolio.png",
+    image: `${import.meta.env.BASE_URL}image/portfolio.webp`,
     category: "react",
     tags: {
       en: ["React", "CSS", "React Router"],
@@ -331,6 +329,9 @@ export function Projects() {
                   src={project.image}
                   alt={project.title[lang]}
                   loading="lazy"
+                  decoding="async"
+                  width={960}
+                  height={540}
                   className="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
                 <CardHeader>

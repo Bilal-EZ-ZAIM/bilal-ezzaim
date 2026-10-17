@@ -6,7 +6,6 @@ import {
   Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 const technologies = [
@@ -44,12 +43,7 @@ export function Hero() {
 
       <div className="section-container relative z-10 flex flex-1 items-center py-12 sm:py-16">
         <div className="grid w-full items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
-          <motion.div
-            initial={{ opacity: 0, x: isArabic ? 40 : -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="min-w-0 text-start"
-          >
+          <div className="min-w-0 text-start">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/15 bg-primary/[0.06] px-4 py-2 text-sm font-semibold text-primary">
               <Sparkles className="h-4 w-4" />
               {t("hero.title")}
@@ -134,14 +128,9 @@ export function Hero() {
                 </a>
               </Button>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: isArabic ? -40 : 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-            className="relative mx-auto flex w-full max-w-md items-center justify-center lg:max-w-none"
-          >
+          <div className="relative mx-auto flex w-full max-w-md items-center justify-center lg:max-w-none">
             <div className="relative w-full max-w-[440px]">
               <div
                 aria-hidden="true"
@@ -156,9 +145,13 @@ export function Hero() {
                 className="absolute -bottom-2 left-[8%] h-28 w-28 rounded-full bg-sky-400/30 blur-2xl"
               />
               <img
-                src={`${import.meta.env.BASE_URL}image/bilal-cutout.png`}
+                src={`${import.meta.env.BASE_URL}image/bilal-cutout.webp`}
                 alt={t("hero.name")}
                 loading="eager"
+                fetchPriority="high"
+                decoding="async"
+                width={577}
+                height={509}
                 className="relative z-10 aspect-[1/0.96] w-full object-contain object-bottom drop-shadow-xl"
               />
               <div className="absolute -bottom-3 end-2 z-20 inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/90 px-4 py-2 text-xs font-semibold text-foreground shadow-lg backdrop-blur sm:end-0 sm:bottom-2">
@@ -166,7 +159,7 @@ export function Hero() {
                 {t("hero.title")}
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
